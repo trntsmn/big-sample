@@ -30,4 +30,5 @@ script:
   # Add gcloud to $PATH
   - source /home/travis/google-cloud-sdk/path.bash.inc
   - gcloud version
+  - gcloud auth activate-service-account --key-file gcloud-credentials.json
   - gcloud app deploy --project big-sample
