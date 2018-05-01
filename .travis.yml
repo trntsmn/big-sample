@@ -21,7 +21,6 @@ before_install:
   - npm set progress=false
   
 install: 
-  - gcloud config set project big-sample
   - npm install
 
 script:
