@@ -10,6 +10,7 @@ cache:
 
 env:
   global:
+    - PATH=$PATH:${HOME}/google-cloud-sdk/bin
     - GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/gcloud-credentials.json
     - TEST_BUCKET_NAME=big-sample
     - GCLOUD_PROJECT=big-sample
