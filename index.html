@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+
+    <title>BitSrc.io FTW</title>
+</head>
+
+<body>
+
+    <button class="scroll-up-button" onclick="scrollUp()">
+        v
+    </button>
+    <button class="scroll-down-button" onclick="scrollDown()">
+        v
+    </button>
+
+    <div class="gradient-box">
+        <div class="gradient-animation"></div>
+        <div class="gradient-animation-bottom"></div>
+    </div>
+
+    <div class="heading">
+        <h1 class="title">
+            <span class="title-big">
+                Bit Src
+            </span>
+            <br />
+            <span class="title-small">
+                Share Components between projects and team members
+            </span>
+        </h1>
+    </div>
+
+    <div class="full-height-container">
+        <div>
+            <h3 class="standard-heading">
+                From the Horse's Mouth
+            </h3>
+            <p class="standard-copy black-border">
+                Bit is a component-as-a-service platform that helps software developers to organize the components of their codebase, make
+                them discoverable, sync them between different projects and use them to build new features and products faster.
+                With Bit, you can focus on product and technological innovation instead of having to reinvent the wheel.
+                <br />
+                <br /> Bit is a collaborative open source project, actively developed and maintained by a venture-backed team and
+                used by more teams and communities every day.
+            </p>
+        </div>
+    </div>
+
+    <div class="full-height-container gradient-bg">
+        <div>
+            <h3 class="standard-heading">
+                Installing Bit
+            </h3>
+            <div class="command-line">
+                <code>
+                    npm install bit-bin --global
+                </code>
+                <br />
+                <code>
+                    yarn global add bit-bin
+                </code>
+            </div>
+            <p class="standard-copy centered-copy">
+                Check out
+                <a href="https://docs.bitsrc.io/docs/installing-bit.html" target="_blank">Bit Docs</a> for even more options.
+            </p>
+        </div>
+    </div>
+
+    <div class="full-height-container gradient-bg-alt">
+        <div>
+            <h3 class="standard-heading">
+                Initializing Bit
+            </h3>
+            <div class="command-line">
+                <code>
+                    bit init
+                </code>
+            </div>
+            <p class="standard-copy centered-copy">
+                As you will see, Bit is very similar to Git source control.
+            </p>
+        </div>
+    </div>
+
+    <div class="full-height-container gradient-bg">
+        <div>
+            <h3 class="standard-heading">
+                Initializing Bit
+            </h3>
+            <div class="command-line">
+                <code>
+                    npm install bit-bin --global
+                    <br />
+                    yarn global add bit-bin
+                 </code>
+            </div>
+            <p class="standard-copy centered-copy">
+                Check out
+                <a href="https://docs.bitsrc.io/docs/installing-bit.html" target="_blank">Bit Docs</a> for even more options.
+            </p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+
+        function scrollDown() {
+            let windowHeight = window.innerHeight;
+            window.scrollBy({
+                left: 0,
+                top: windowHeight,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollUp() {
+            let windowHeight = window.innerHeight;
+            window.scrollBy({
+                left: 0,
+                top: -windowHeight,
+                behavior: 'smooth'
+            });
+        }
+
+        function handleScroll(e) {
+            console.log(e);
+            /*  Up Arrow Clicked  */
+            if (e.keyCode == '38') {
+                return scrollUp();
+            } /*  Down Arrow Clicked  */
+            else if (e.keyCode == '40') {
+                return scrollDown();
+            } /*  Scroll Wheel Up  */
+            else if (e.wheelDeltaY >= 50) {
+                return scrollUp();
+            } /*  Scroll Wheel Down  */
+            else if (e.wheelDeltaY <= -50) {
+                return scrollDown();
+            }
+        }
+
+        window.addEventListener('keydown', handleScroll);
+        window.addEventListener('wheel', handleScroll);
+        
+    </script>
+
+</body>
+
+</html>

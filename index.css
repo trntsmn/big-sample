@@ -1,0 +1,283 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+a {
+    color: rgb(60, 231, 151);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+code {
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 2.5;
+}
+
+code:before {
+    content: '$';
+}
+
+.scroll-up-button,
+.scroll-down-button {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-animation: Gradient 10s ease infinite, FadeIn 1s ease .8s;
+    animation: Gradient 10s ease infinite, FadeIn 1s ease .8s;
+    animation-fill-mode: backwards;
+    -webkit-animation-fill-mode: backwards;
+    background: linear-gradient( -45deg, rgb(126, 238, 82), rgb(60, 231, 151), rgb(35, 204, 213), rgb(245, 245, 32));
+    background-size: 400% 400%;
+    border: 1px solid rgba(231, 60, 103, .6);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: -webkit-flex;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    height: 50px;
+    justify-content: center;
+    outline: none;
+    position: fixed;
+    right: 15px;
+    transition: all .2s ease;
+    width: 50px;
+    z-index: 2;
+}
+
+@-webkit-keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.scroll-up-button {
+    bottom: 80px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.scroll-down-button {
+    bottom: 20px;
+}
+
+.scroll-up-button:hover {
+    box-shadow: 0 -5px 6px 0 rgba(0,0,0,0.3);
+    -webkit-transform: translateY(-2px) rotate(180deg);
+    transform: translateY(-2px) rotate(180deg);
+}
+
+.scroll-down-button:hover {
+    box-shadow: 0 5px 6px 0 rgba(0,0,0,0.3);
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+.heading {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.title {
+    -webkit-animation: FlyIn .5s ease-in-out .3s;
+    animation: FlyIn .5s ease-in-out .3s;
+    animation-fill-mode: backwards;
+    -webkit-animation-fill-mode: backwards;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    z-index: 2;
+}
+
+@-webkit-keyframes FlyIn {
+    0% {
+        -webkit-transform: scale(0) translateY(70vh) rotate(-10deg);
+        transform: scale(0) translateY(70vh) rotate(-10deg);
+    }
+    100% {
+        -webkit-transform: scale(1) translateY(0) rotate(-10deg);
+        transform: scale(1) translateY(0) rotate(-10deg);
+    }
+}
+
+@keyframes FlyIn {
+    0% {
+        -webkit-transform: scale(0) translateY(70vh) rotate(-10deg);
+        transform: scale(0) translateY(70vh) rotate(-10deg);
+    }
+    100% {
+        -webkit-transform: scale(1) translateY(0) rotate(-10deg);
+        transform: scale(1) translateY(0) rotate(-10deg);
+    }
+}
+
+.title-big {
+    font-family: 'Bungee Shade', Arial, Helvetica, sans-serif;
+    font-size: 200px;
+}
+
+.title-small {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gradient-box {
+    position: relative;
+    z-index: 1;
+}
+
+.gradient-animation {
+    -webkit-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite;
+    background: linear-gradient( -45deg, rgb(126, 238, 82), rgb(60, 231, 151), rgb(35, 204, 213), rgb(245, 245, 32));
+    background-size: 400% 400%;
+    -webkit-clip-path: polygon( 0 0, 100% 0, 0 100%);
+    clip-path: polygon( 0 0, 100% 0, 0 100%);
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+
+.gradient-animation-bottom {
+    -webkit-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite;
+    background: linear-gradient( -45deg, rgb(238, 82, 225), rgb(231, 60, 103), rgb(213, 94, 35), rgb(163, 32, 245));
+    background-size: 400% 400%;
+    -webkit-clip-path: polygon( 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon( 100% 0, 100% 100%, 0 100%);
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.full-height-container {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.standard-heading {
+    font-family: 'Bungee Shade', Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.standard-copy {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 1.35;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.centered-copy {
+    text-align: center;
+}
+
+.black-border {
+    border: 5px solid rgba(0,0,0,.8);
+    max-width: 700px;
+    padding: 40px;
+}
+
+.gradient-bg {
+    -webkit-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite;
+    background: linear-gradient( -45deg, rgb(238, 82, 225), rgb(231, 60, 103), rgb(213, 94, 35), rgb(163, 32, 245));
+    background-size: 400% 400%;
+    color: #fff;
+}
+
+.command-line {
+    background-color: rgba(0,0,0,.8);
+    border: 2px solid #fff;
+    color: #fff;
+    margin: 0 auto 45px auto;
+    overflow-y: scroll;
+    padding: 30px 50px;
+    width: 740px;
+}
+
+.gradient-bg-alt {
+    -webkit-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite;
+    background: linear-gradient( -45deg, rgb(126, 238, 82), rgb(60, 231, 151), rgb(35, 204, 213), rgb(245, 245, 32));
+    background-size: 400% 400%;
+    color: #fff;
+}
+
+.a-alt {
+    color: rgb(238, 82, 225);
+}
