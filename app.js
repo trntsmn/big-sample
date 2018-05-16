@@ -20,7 +20,8 @@ const app = express();
 // [START hello_world]
 // Say hello!
 app.get('/', (req, res) => {
-  res.status(200).send('Yo Im Dylan!');
+  //res.status(200).send('Yo Im Dylan!');
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
 // [END hello_world]
 
