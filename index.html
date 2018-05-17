@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,513 +12,535 @@
 </head>
 
 <body>
+
+        <button class="scroll-to-top" onclick="scrollToTop()">
+            back to top
+        </button>
+        <button class="intro-button" onclick="scrollToId('intro')">
+            intro
+        </button>
+        <button class="staging-button" onclick="scrollToId('staging')">
+            staging
+        </button>
+        <button class="export-button" onclick="scrollToId('export')">
+            export
+        </button>
+        <button class="preview-button" onclick="scrollToId('preview')">
+            preview
+        </button>
+        <button class="import-button" onclick="scrollToId('import')">
+            import
+        </button>
+        <button class="scroll-up-button">
+            v
+        </button>
+        <button class="scroll-down-button">
+            v
+        </button>
     
-    <button class="scroll-to-top" onclick="scrollToTop()">
-        back to top
-    </button>
-    <button class="scroll-up-button">
-        v
-    </button>
-    <button class="scroll-down-button">
-        v
-    </button>
-
-    <div class="gradient-box">
-        <div class="gradient-animation"></div>
-        <div class="gradient-animation-bottom"></div>
-    </div>
-
-    <div class="heading">
-        <h1 class="title">
-            <span class="title-big">
-                Bit Src
-            </span>
-            <br />
-            <span class="title-small">
-                Share Components between projects and team members
-            </span>
-        </h1>
-    </div>
-
-    <div class="full-height-container">
-        <div>
-            <h3 class="standard-heading big-heading" id="intro">
-                From the Horse's Mouth
-            </h3>
-            <p class="standard-copy black-border">
-                Bit is a component-as-a-service platform that helps software developers to organize the components of their codebase, make
-                them discoverable, sync them between different projects and use them to build new features and products faster.
-                With Bit, you can focus on product and technological innovation instead of having to reinvent the wheel.
+        <div class="gradient-box">
+            <div class="gradient-animation"></div>
+            <div class="gradient-animation-bottom"></div>
+        </div>
+    
+        <div class="heading">
+            <h1 class="title">
+                <span class="title-big">
+                    Bit Src
+                </span>
                 <br />
-                <br /> Bit is a collaborative open source project, actively developed and maintained by a venture-backed team and
-                used by more teams and communities every day.
-            </p>
+                <span class="title-small">
+                    Share Components between projects and team members
+                </span>
+            </h1>
         </div>
-    </div>
-
-    <div class="full-height-container gradient-bg">
-        <div>
-            <h3 class="standard-heading">
-                Installing Bit
-            </h3>
-            <div class="command-line">
-                <code>
-                    npm install bit-bin --global
-                </code>
-                <br />
-                <code>
-                    yarn global add bit-bin
-                </code>
-            </div>
-            <p class="standard-copy centered-copy">
-                Check out
-                <a href="https://docs.bitsrc.io/docs/installing-bit.html" target="_blank">Bit Docs</a> for even more options.
-            </p>
-        </div>
-    </div>
-
-    <div class="full-height-container gradient-bg-alt">
-        <div>
-            <h3 class="standard-heading">
-                Initializing Bit
-            </h3>
-            <div class="command-line">
-                <code>
-                    bit init
-                </code>
-            </div>
-            <p class="standard-copy centered-copy">
-                As you will see, Bit is very similar to Git source control.
-            </p>
-        </div>
-    </div>
-
-    <div class="full-height-container">
-        <div>
-            <h3 class="standard-heading big-heading" id="staging">
-                Ready Components for Export
-            </h3>
-            <p class="standard-copy black-border">
-                Bit has a straight-forward process as far as exporting components to your desired scope. While simple, it does involve a
-                number of steps and an adjustment in workflow. You will have to create a Bit Src account before starting
-                this phase.
-                <br />
-                <br /> Head over to
-                <a href="https://bitsrc.io/" target="_blank">BitSrc.io</a> to start an account.
-            </p>
-        </div>
-    </div>
-
-    <div class="full-height-container gradient-bg">
-        <div>
-            <h3 class="standard-heading">
-                Adding a Component
-            </h3>
-            <p class="standard-copy centered-copy mb">
-                To start tracking a component, you need to add it.
-            </p>
-            <div class="command-line">
-                <code>
-                    bit add src/foo/bar.js
-                 </code>
-            </div>
-            <p class="standard-copy centered-copy mb">
-                Here are all your options:
-            </p>
-            <div class="command-line">
-                <code>
-                    bit add|a &lt;files> [-i|--id &lt;id>] [-m|--main &lt;main file name>] [-t|--tests &lt;tests>] [-n|--namespace &lt;namespace>] [-e|--exclude &lt;files to exclude>] [-o|--override]
-                </code>
-            </div>
-        </div>
-    </div>
-
-    <div class="full-height-container gradient-bg-alt">
-        <div>
-            <h3 class="standard-heading">
-                Adding Multiple Components
-            </h3>
-            <p class="standard-copy centered-copy mb">
-                Add several components using a file list or add all components sharing a directory &amp; sub-directories.
-            </p>
-            <div class="command-line">
-                <code>
-                    bit add src/foo/bar.js src/utils/connect.js
-                </code>
-                <br />
-                <code>
-                    bit add src/foo/*
-                </code>
-                <br />
-                <code>
-                    bit add src/foo/**
-                </code>
-            </div>
-            <p class="standard-copy centered-copy mb">
-                Add a component that stores the entire directory.
-            </p>
-            <div class="command-line">
-                <code>
-                    bit add src/foo/
-                </code>
-            </div>
-        </div>
-    </div>
-
-    <div class="full-height-container gradient-bg">
-        <div>
-            <h3 class="standard-heading">
-                Declaring Name on Add
-            </h3>
-            <p class="standard-copy centered-copy mb">
-                Use the --id tag to store under a desired namespace.
-            </p>
-            <div class="command-line">
-                <code>
-                    bit add src/foo/bar.js --id what/ever
-                </code>
-            </div>
-            <p class="standard-copy centered-copy">
-                Check out
-                <a href="https://docs.bitsrc.io/docs/cli-add.html" target="_blank">Bit Adding</a> for info on adding components.
-            </p>
-        </div>
-    </div>
-
-    <div class="full-height-container gradient-bg-alt">
-        <div>
-            <h3 class="standard-heading">
-                Checking Bit Status
-            </h3>
-            <p class="standard-copy centered-copy mb">
-                To see which stage your components are at, run status.
-            </p>
-            <div class="command-line">
-                <code>
-                    bit status
+    
+        <div class="full-height-container" id="intro">
+            <div>
+                <h3 class="standard-heading big-heading">
+                    From the Horse's Mouth
+                </h3>
+                <p class="standard-copy black-border">
+                    Bit is a component-as-a-service platform that helps software developers to organize the components of their codebase, make
+                    them discoverable, sync them between different projects and use them to build new features and products faster.
+                    With Bit, you can focus on product and technological innovation instead of having to reinvent the wheel.
                     <br />
-                    new components
+                    <br /> Bit is a collaborative open source project, actively developed and maintained by a venture-backed team and
+                    used by more teams and communities every day.
+                </p>
+            </div>
+        </div>
+    
+        <div class="full-height-container gradient-bg">
+            <div>
+                <h3 class="standard-heading">
+                    Installing Bit
+                </h3>
+                <div class="command-line">
+                    <code>
+                        npm install bit-bin --global
+                    </code>
                     <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> foo/bar... ok
+                    <code>
+                        yarn global add bit-bin
+                    </code>
+                </div>
+                <p class="standard-copy centered-copy">
+                    Check out
+                    <a href="https://docs.bitsrc.io/docs/installing-bit.html" target="_blank">Bit Docs</a> for even more options.
+                </p>
+            </div>
+        </div>
+    
+        <div class="full-height-container gradient-bg-alt">
+            <div>
+                <h3 class="standard-heading">
+                    Initializing Bit
+                </h3>
+                <div class="command-line">
+                    <code>
+                        bit init
+                    </code>
+                </div>
+                <p class="standard-copy centered-copy">
+                    As you will see, Bit is very similar to Git source control.
+                </p>
+            </div>
+        </div>
+    
+        <div class="full-height-container" id="staging">
+            <div>
+                <h3 class="standard-heading big-heading">
+                    Ready Components for Export
+                </h3>
+                <p class="standard-copy black-border">
+                    Bit has a straight-forward process as far as exporting components to your desired scope. While simple, it does involve a
+                    number of steps and an adjustment in workflow. You will have to create a Bit Src account before starting
+                    this phase.
                     <br />
-                    --------------
-                </code>
+                    <br /> Head over to
+                    <a href="https://bitsrc.io/" target="_blank">BitSrc.io</a> to start an account.
+                </p>
             </div>
         </div>
-    </div>
-
-    <div class="full-height-container gradient-bg">
-        <div>
-            <h3 class="standard-heading">
-                Component Environments
-            </h3>
-            <p class="standard-copy centered-copy mb">
-                To build, test, and render components you need to import the proper environment specs.
-                <br />
-                <br /> Here's an example using Webpack &amp; React.
-            </p>
-            <div class="command-line">
-                <code>
-                    bit import bit.envs/bundlers/webpack -c
-                </code>
-                <br />
-                <code>
-                    bit import bit.envs/compilers/react -c
-                </code>
-            </div>
-            <p class="standard-copy centered-copy">
-                Check out
-                <a href="https://bitsrc.io/bit/envs" target="_blank">Bit Envs</a> for more options.
-            </p>
-        </div>
-    </div>
-
-    <div class="full-height-container gradient-bg-alt">
-        <div>
-            <h3 class="standard-heading">
-                Build &amp; Tag Your Component
-            </h3>
-            <p class="standard-copy centered-copy mb">
-                Run build to ready your component.
-            </p>
-            <div class="command-line">
-                <code>
-                    bit build foo/bar
-                </code>
-            </div>
-            <p class="standard-copy centered-copy mb">
-                After the build, give your component a version tag if you are happy with it. You can specify the version or run it for all
-                tracked components if you want.
-            </p>
-            <div class="command-line">
-                <code>
-                    bit tag foo/bar
-                </code>
-                <br />
-                <code>
-                    bit tag foo/bar 1.0.2
-                </code>
-                <br />
-                <code>
-                    bit tag --all
-                </code>
+    
+        <div class="full-height-container gradient-bg">
+            <div>
+                <h3 class="standard-heading">
+                    Adding a Component
+                </h3>
+                <p class="standard-copy centered-copy mb">
+                    To start tracking a component, you need to add it.
+                </p>
+                <div class="command-line">
+                    <code>
+                        bit add src/foo/bar.js
+                     </code>
+                </div>
+                <p class="standard-copy centered-copy mb">
+                    Here are all your options:
+                </p>
+                <div class="command-line">
+                    <code>
+                        bit add|a &lt;files> [-i|--id &lt;id>] [-m|--main &lt;main file name>] [-t|--tests &lt;tests>] [-n|--namespace &lt;namespace>] [-e|--exclude &lt;files to exclude>] [-o|--override]
+                    </code>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="full-height-container gradient-bg">
-        <div>
-            <h3 class="standard-heading">
-                Staged Components
-            </h3>
-            <p class="standard-copy centered-copy mb">
-                If we run status again, we will see our component is staged and ready for export.
-            </p>
-            <div class="command-line">
-                <code>
-                    bit status
+    
+        <div class="full-height-container gradient-bg-alt">
+            <div>
+                <h3 class="standard-heading">
+                    Adding Multiple Components
+                </h3>
+                <p class="standard-copy centered-copy mb">
+                    Add several components using a file list or add all components sharing a directory &amp; sub-directories.
+                </p>
+                <div class="command-line">
+                    <code>
+                        bit add src/foo/bar.js src/utils/connect.js
+                    </code>
                     <br />
-                    staged components
+                    <code>
+                        bit add src/foo/*
+                    </code>
                     <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> foo/bar. versions: 0.0.1... ok
+                    <code>
+                        bit add src/foo/**
+                    </code>
+                </div>
+                <p class="standard-copy centered-copy mb">
+                    Add a component that stores the entire directory.
+                </p>
+                <div class="command-line">
+                    <code>
+                        bit add src/foo/
+                    </code>
+                </div>
+            </div>
+        </div>
+    
+        <div class="full-height-container gradient-bg">
+            <div>
+                <h3 class="standard-heading">
+                    Declaring Name on Add
+                </h3>
+                <p class="standard-copy centered-copy mb">
+                    Use the --id tag to store under a desired namespace.
+                </p>
+                <div class="command-line">
+                    <code>
+                        bit add src/foo/bar.js --id what/ever
+                    </code>
+                </div>
+                <p class="standard-copy centered-copy">
+                    Check out
+                    <a href="https://docs.bitsrc.io/docs/cli-add.html" target="_blank">Bit Adding</a> for info on adding components.
+                </p>
+            </div>
+        </div>
+    
+        <div class="full-height-container gradient-bg-alt">
+            <div>
+                <h3 class="standard-heading">
+                    Checking Bit Status
+                </h3>
+                <p class="standard-copy centered-copy mb">
+                    To see which stage your components are at, run status.
+                </p>
+                <div class="command-line">
+                    <code>
+                        bit status
+                        <br />
+                        new components
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> foo/bar... ok
+                        <br />
+                        --------------
+                    </code>
+                </div>
+            </div>
+        </div>
+    
+        <div class="full-height-container gradient-bg">
+            <div>
+                <h3 class="standard-heading">
+                    Component Environments
+                </h3>
+                <p class="standard-copy centered-copy mb">
+                    To build, test, and render components you need to import the proper environment specs.
                     <br />
-                    --------------
-                </code>
-            </div>
-        </div>
-    </div>
-
-    <div class="full-height-container" id="export">
-        <div>
-            <h3 class="standard-heading big-heading">
-                Exporting Components
-            </h3>
-            <p class="standard-copy black-border">
-                It has been a workout getting here, but we can now export our components. If you haven't started a Bit Src account yet, it
-                is absolutely necessary at this point. So what are you still sitting on your hands for?
-                <br />
-                <br /> Head over to
-                <a href="https://bitsrc.io/" target="_blank">BitSrc.io</a> to start an account.
-            </p>
-        </div>
-    </div>
-
-    <div class="full-height-container gradient-bg-alt">
-        <div>
-            <h3 class="standard-heading">
-                Let's Export!
-            </h3>
-            <p class="standard-copy centered-copy mb">
-                Once you create a new scope thru your Bit Src account, you can export your components to it.
-            </p>
-            <div class="command-line">
-                <code>
-                    bit export username.scope
-                </code>
-            </div>
-            <p class="standard-copy centered-copy mb">
-                If you check the status again, you will see it is empty
-            </p>
-            <div class="command-line">
-                <code>
-                    bit status
+                    <br /> Here's an example using Webpack &amp; React.
+                </p>
+                <div class="command-line">
+                    <code>
+                        bit import bit.envs/bundlers/webpack -c
+                    </code>
                     <br />
-                    * there's nothing to see here *
-                </code>
+                    <code>
+                        bit import bit.envs/compilers/react -c
+                    </code>
+                </div>
+                <p class="standard-copy centered-copy">
+                    Check out
+                    <a href="https://bitsrc.io/bit/envs" target="_blank">Bit Envs</a> for more options.
+                </p>
             </div>
         </div>
-    </div>
-
-    <div class="full-height-container">
-        <div>
-            <h3 class="standard-heading big-heading">
-                Previewing Components
-            </h3>
-            <p class="standard-copy black-border" id="preview">
-                Storing components in an online scope has its perks but the real benefit is being able to preview. You can see working versions
-                of your components right in your component library on BitSrc.io, pretty nifty indeed. Utilizing the preview
-                mode does require one more step though, so let's check out an example of getting a preview setup.
-            </p>
-        </div>
-    </div>
-
-    <div class="full-height-container gradient-bg">
-        <div>
-            <h3 class="standard-heading">
-                Setting Up for Preview
-            </h3>
-            <p class="standard-copy centered-copy mb">
-                At the top of your component file, add some commented text to create preview specs.
-            </p>
-            <div class="command-line wide-cl">
-                <code class="code-exception green-text">
-                    /**<br />
-                    * @render react<br />
-                    * @name Bar<br />
-                    * @example<br />
-                    * &lt;Bar<br />
-                    * &nbsp;&nbsp;title="Here is some sample prop info"<br />
-                    * &nbsp;&nbsp;description="Add whatever here to get a preview" /><br />
-                    */
-                </code>
+    
+        <div class="full-height-container gradient-bg-alt">
+            <div>
+                <h3 class="standard-heading">
+                    Build &amp; Tag Your Component
+                </h3>
+                <p class="standard-copy centered-copy mb">
+                    Run build to ready your component.
+                </p>
+                <div class="command-line">
+                    <code>
+                        bit build foo/bar
+                    </code>
+                </div>
+                <p class="standard-copy centered-copy mb">
+                    After the build, give your component a version tag if you are happy with it. You can specify the version or run it for all
+                    tracked components if you want.
+                </p>
+                <div class="command-line">
+                    <code>
+                        bit tag foo/bar
+                    </code>
+                    <br />
+                    <code>
+                        bit tag foo/bar 1.0.2
+                    </code>
+                    <br />
+                    <code>
+                        bit tag --all
+                    </code>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="full-height-container gradient-bg-alt">
-        <div>
-            <h3 class="standard-heading">
-                Preview of the Preview
-            </h3>
-            <img class="preview-img" src="bit-preview.png" width="80%" />
-            <p class="standard-copy centered-copy mb">
-                Learn more about this great feature at
-                <a class="a-alt" href="https://docs.bitsrc.io/docs/rendering-components.html">Bit Rendering</a>.
-            </p>
-        </div>
-    </div>
-
-    <div class="full-height-container">
-        <div>
-            <h3 class="standard-heading big-heading" id="import">
-                Importing Components to Your Project
-            </h3>
-            <p class="standard-copy black-border">
-                As you may have noticed, a lot of the work happens in the staging phase. Actually exporting your component is quite simple
-                and once a component is stored in a scope you can import it anywhere you like, dependencies intact.
-            </p>
-        </div>
-    </div>
-
-    <div class="full-height-container gradient-bg">
-        <div>
-            <h3 class="standard-heading">
-                Create Scoped Registry
-            </h3>
-            <p class="standard-copy centered-copy mb">
-                To configure npm installing Bit components, you will need to configure BitSrc.io as a Scoped Registry.
-            </p>
-            <div class="command-line wide-cl">
-                <code>
-                    npm config set @bit:registry https://node.bitsrc.io
-                </code>
+    
+        <div class="full-height-container gradient-bg">
+            <div>
+                <h3 class="standard-heading">
+                    Staged Components
+                </h3>
+                <p class="standard-copy centered-copy mb">
+                    If we run status again, we will see our component is staged and ready for export.
+                </p>
+                <div class="command-line">
+                    <code>
+                        bit status
+                        <br />
+                        staged components
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> foo/bar. versions: 0.0.1... ok
+                        <br />
+                        --------------
+                    </code>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="full-height-container gradient-bg-alt">
-        <div>
-            <h3 class="standard-heading">
-                Installing &amp; Importing Components
-            </h3>
-            <p class="standard-copy centered-copy mb">
-                You can install any component utilizing the following pattern:
-            </p>
-            <div class="command-line">
-                <code>
-                    npm install @bit/username.scope.foo.bar
-                </code>
-            </div>
-            <p class="standard-copy centered-copy mb">
-                The npm installs dependencies if needed and now you can import the component into your project.
-            </p>
-            <div class="command-line">
-                <code class="code-exception">
-                    import Bar from '@bit/username.scope.foo.bar';
-                </code>
+    
+        <div class="full-height-container" id="export">
+            <div>
+                <h3 class="standard-heading big-heading">
+                    Exporting Components
+                </h3>
+                <p class="standard-copy black-border">
+                    It has been a workout getting here, but we can now export our components. If you haven't started a Bit Src account yet, it
+                    is absolutely necessary at this point. So what are you still sitting on your hands for?
+                    <br />
+                    <br /> Head over to
+                    <a href="https://bitsrc.io/" target="_blank">BitSrc.io</a> to start an account.
+                </p>
             </div>
         </div>
-    </div>
-
-    <div class="full-height-container">
-        <div>
-            <h3 class="standard-heading big-heading">
-                The End
-            </h3>
-            <p class="standard-copy black-border mb">
-                That's it as far as simple introductions go. If you dig deeper you will find that you can edit components and they will get
-                tagged with a new version as you go. Similar to Git, you can always see what the component looked like in
-                earlier versions. There is a lot more to learn for additional levels of control, so check
-                <a href="https://docs.bitsrc.io/" target="_blank">Bit Docs</a> for further learning.
-            </p>
-            <h3 class="standard-heading">
-                Get modular with it!
-                <br /> Use Bit Src!
-            </h3>
+    
+        <div class="full-height-container gradient-bg-alt">
+            <div>
+                <h3 class="standard-heading">
+                    Let's Export!
+                </h3>
+                <p class="standard-copy centered-copy mb">
+                    Once you create a new scope thru your Bit Src account, you can export your components to it.
+                </p>
+                <div class="command-line">
+                    <code>
+                        bit export username.scope
+                    </code>
+                </div>
+                <p class="standard-copy centered-copy mb">
+                    If you check the status again, you will see it is empty
+                </p>
+                <div class="command-line">
+                    <code>
+                        bit status
+                        <br />
+                        * there's nothing to see here *
+                    </code>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <script>
-
-        function removeListeners() {
-            document.querySelector('.scroll-up-button').onclick = '';
-            document.querySelector('.scroll-down-button').onclick = '';
-
-            window.removeEventListener('keydown', handleScroll);
-            window.removeEventListener('wheel', handleScroll);
-        }
-
-        function addListeners() {
-            setTimeout(function () {
-                window.addEventListener('keydown', handleScroll);
-                window.addEventListener('wheel', handleScroll);
-                document.querySelector('.scroll-up-button').onclick = scrollUp;
-                document.querySelector('.scroll-down-button').onclick = scrollDown;
-            }, 525);
-        }
-
-        function scrollDown() {
-            removeListeners();
-            let windowHeight = window.innerHeight;
-            window.scrollBy({
-                left: 0,
-                top: windowHeight,
-                behavior: 'smooth'
-            });
-            addListeners();
-        }
-
-        function scrollUp() {
-            removeListeners();
-            let windowHeight = window.innerHeight;
-            window.scrollBy({
-                left: 0,
-                top: -windowHeight,
-                behavior: 'smooth'
-            });
-            addListeners();
-        }
-
-        function scrollToTop() {
-            window.scroll({
-                left: 0,
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        function handleScroll(e) {
-            removeListeners();
-            /*  Up Arrow Clicked  */
-            if (e.keyCode == '38') {
-                scrollUp();
-            } /*  Down Arrow Clicked  */
-            else if (e.keyCode == '40') {
-                scrollDown();
-            } /*  Scroll Wheel Up  */
-            else if (e.wheelDeltaY >= 45) {
-                scrollUp();
-            } /*  Scroll Wheel Down  */
-            else if (e.wheelDeltaY <= -45) {
-                scrollDown();
+    
+        <div class="full-height-container" id="preview">
+            <div>
+                <h3 class="standard-heading big-heading">
+                    Previewing Components
+                </h3>
+                <p class="standard-copy black-border">
+                    Storing components in an online scope has its perks but the real benefit is being able to preview. You can see working versions
+                    of your components right in your component library on BitSrc.io, pretty nifty indeed. Utilizing the preview
+                    mode does require one more step though, so let's check out an example of getting a preview setup.
+                </p>
+            </div>
+        </div>
+    
+        <div class="full-height-container gradient-bg">
+            <div>
+                <h3 class="standard-heading">
+                    Setting Up for Preview
+                </h3>
+                <p class="standard-copy centered-copy mb">
+                    At the top of your component file, add some commented text to create preview specs.
+                </p>
+                <div class="command-line wide-cl">
+                    <code class="code-exception green-text">
+                        /**<br />
+                        * @render react<br />
+                        * @name Bar<br />
+                        * @example<br />
+                        * &lt;Bar<br />
+                        * &nbsp;&nbsp;title="Here is some sample prop info"<br />
+                        * &nbsp;&nbsp;description="Add whatever here to get a preview" /><br />
+                        */
+                    </code>
+                </div>
+            </div>
+        </div>
+    
+        <div class="full-height-container gradient-bg-alt">
+            <div>
+                <h3 class="standard-heading">
+                    Preview of the Preview
+                </h3>
+                <img class="preview-img" src="/foolio/img/bit-preview.png" width="80%" />
+                <p class="standard-copy centered-copy mb">
+                    Learn more about this great feature at
+                    <a class="a-alt" href="https://docs.bitsrc.io/docs/rendering-components.html">Bit Rendering</a>.
+                </p>
+            </div>
+        </div>
+    
+        <div class="full-height-container" id="import">
+            <div>
+                <h3 class="standard-heading big-heading">
+                    Importing Components to Your Project
+                </h3>
+                <p class="standard-copy black-border">
+                    As you may have noticed, a lot of the work happens in the staging phase. Actually exporting your component is quite simple
+                    and once a component is stored in a scope you can import it anywhere you like, dependencies intact.
+                </p>
+            </div>
+        </div>
+    
+        <div class="full-height-container gradient-bg">
+            <div>
+                <h3 class="standard-heading">
+                    Create Scoped Registry
+                </h3>
+                <p class="standard-copy centered-copy mb">
+                    To configure npm installing Bit components, you will need to configure BitSrc.io as a Scoped Registry.
+                </p>
+                <div class="command-line wide-cl">
+                    <code>
+                        npm config set @bit:registry https://node.bitsrc.io
+                    </code>
+                </div>
+            </div>
+        </div>
+    
+        <div class="full-height-container gradient-bg-alt">
+            <div>
+                <h3 class="standard-heading">
+                    Installing &amp; Importing Components
+                </h3>
+                <p class="standard-copy centered-copy mb">
+                    You can install any component utilizing the following pattern:
+                </p>
+                <div class="command-line">
+                    <code>
+                        npm install @bit/username.scope.foo.bar
+                    </code>
+                </div>
+                <p class="standard-copy centered-copy mb">
+                    The npm installs dependencies if needed and now you can import the component into your project.
+                </p>
+                <div class="command-line">
+                    <code class="code-exception">
+                        import Bar from '@bit/username.scope.foo.bar';
+                    </code>
+                </div>
+            </div>
+        </div>
+    
+        <div class="full-height-container">
+            <div>
+                <h3 class="standard-heading big-heading">
+                    The End
+                </h3>
+                <p class="standard-copy black-border mb">
+                    That's it as far as simple introductions go. If you dig deeper you will find that you can edit components and they will get
+                    tagged with a new version as you go. Similar to Git, you can always see what the component looked like in
+                    earlier versions. There is a lot more to learn for additional levels of control, so check
+                    <a href="https://docs.bitsrc.io/" target="_blank">Bit Docs</a> for further learning.
+                </p>
+                <h3 class="standard-heading">
+                    Get modular with it!
+                    <br /> Use Bit Src!
+                </h3>
+            </div>
+        </div>
+    
+        <script src="/foolio/js/zenscroll-min.js"></script>
+    
+        <script>
+    
+            function removeListeners() {
+                document.querySelector('.scroll-up-button').onclick = '';
+                document.querySelector('.scroll-down-button').onclick = '';
+    
+                window.removeEventListener('keydown', handleScroll);
+                window.removeEventListener('wheel', handleScroll);
             }
+    
+            function addListeners() {
+                setTimeout(function () {
+                    window.addEventListener('keydown', handleScroll);
+                    window.addEventListener('wheel', handleScroll);
+                    document.querySelector('.scroll-up-button').onclick = scrollUp;
+                    document.querySelector('.scroll-down-button').onclick = scrollDown;
+                }, 525);
+            }
+    
+            function scrollDown() {
+                removeListeners();
+                let windowHeight = window.innerHeight;
+                window.scrollBy({
+                    left: 0,
+                    top: windowHeight,
+                    behavior: 'smooth'
+                });
+                addListeners();
+            }
+    
+            function scrollUp() {
+                removeListeners();
+                let windowHeight = window.innerHeight;
+                window.scrollBy({
+                    left: 0,
+                    top: -windowHeight,
+                    behavior: 'smooth'
+                });
+                addListeners();
+            }
+    
+            function scrollToTop() {
+                window.scroll({
+                    left: 0,
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+    
+            function scrollToId(id) {
+                const targetId = document.getElementById(id);
+                zenscroll.center(targetId);
+            }
+    
+            function handleScroll(e) {
+                removeListeners();
+                /*  Up Arrow Clicked  */
+                if (e.keyCode == '38') {
+                    scrollUp();
+                } /*  Down Arrow Clicked  */
+                else if (e.keyCode == '40') {
+                    scrollDown();
+                } /*  Scroll Wheel Up  */
+                else if (e.wheelDeltaY >= 45) {
+                    scrollUp();
+                } /*  Scroll Wheel Down  */
+                else if (e.wheelDeltaY <= -45) {
+                    scrollDown();
+                }
+                addListeners();
+            }
+    
             addListeners();
-        }
-
-        addListeners();
-
-    </script>
-
-</body>
-
-</html>
+    
+        </script>
+    
+    </body>
+    
+    </html>

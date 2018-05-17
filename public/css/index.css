@@ -39,7 +39,12 @@ code:before {
 
 .scroll-up-button,
 .scroll-down-button,
-.scroll-to-top {
+.scroll-to-top,
+.import-button,
+.preview-button,
+.export-button,
+.staging-button,
+.intro-button {
     -webkit-align-items: center;
     align-items: center;
     -webkit-animation: Gradient 10s ease infinite, FadeIn 1s ease .8s;
@@ -95,9 +100,37 @@ code:before {
     font-size: 28px;
 }
 
-.scroll-to-top {
-    bottom: 140px;
+.scroll-to-top,
+.import-button,
+.preview-button,
+.export-button,
+.staging-button,
+.intro-button {
     font-size: 12px;
+}
+
+.import-button {
+    bottom: 140px;
+}
+
+.preview-button {
+    bottom: 200px;
+}
+
+.export-button {
+    bottom: 260px;
+}
+
+.staging-button {
+    bottom: 320px;
+}
+
+.intro-button {
+    bottom: 380px;
+}
+
+.scroll-to-top {
+    bottom: 440px;
 }
 
 .scroll-up-button:hover {
@@ -113,14 +146,24 @@ code:before {
 }
 
 .scroll-down-button:hover,
-.scroll-to-top:hover {
+.scroll-to-top:hover,
+.import-button:hover,
+.preview-button:hover,
+.export-button:hover,
+.staging-button:hover,
+.intro-button:hover {
     box-shadow: 0 5px 6px 0 rgba(0,0,0,0.3);
     -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
 }
 
 .scroll-down-button:active,
-.scroll-to-top:active {
+.scroll-to-top:active,
+.import-button:active,
+.preview-button:active,
+.export-button:active,
+.staging-button:active,
+.intro-button:active {
     box-shadow: 0 3px 4px 0 rgba(0,0,0,0.3);
     -webkit-transform: translateY(-1px);
     transform: translateY(-1px);
