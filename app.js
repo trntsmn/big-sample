@@ -20,7 +20,7 @@ const app = express();
 
 // [START hello_world]
 // Say hello!
-app.use(express.static(path.join(__dirname, '/public')));
+app.use('/foolio', express.static(path.join(__dirname, '/public')));
 app.get('/', (req, res) => {
   //res.status(200).send('Yo Im Dylan!');
   res.sendFile(path.join(__dirname + '/index.html'));
